@@ -29,6 +29,15 @@ endif
 ifeq ($(CONFIG_ARCH_RAVELIN), y)
 dtbo-y += ravelin/ravelin-dsp.dtbo
 endif
+
+#ifeq ($(CONFIG_ARCH_CANOE), y)
+#ifeq ($(CONFIG_ARCH_QTI_VM), y)
+#dtbo-y += canoe/canoe-dsp-trustedvm.dtbo
+#else
+#dtbo-y += canoe/canoe-dsp.dtbo
+#endif
+#endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo

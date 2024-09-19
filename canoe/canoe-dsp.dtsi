@@ -88,6 +88,7 @@
 		qcom,fastrpc-gids = <2908>;
 		qcom,rpc-latency-us = <235>;
 		qcom,single-core-latency-vote;
+		qcom,dsp-iova-format = <1>;
 
 		compute-cb@1 {
 			compatible = "qcom,fastrpc-compute-cb";
@@ -230,7 +231,7 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
+			pd-type = <10>;	/* EXT_MAP_PD_TYPE */
 			alloc-size-range = <0x0 0xFFFFFFFF>;
 		};
 
@@ -246,7 +247,7 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
+			pd-type = <10>;	/* EXT_MAP_PD_TYPE */
 			alloc-size-range = <0x0 0xFFFFFFFF>;
 		};
 	};

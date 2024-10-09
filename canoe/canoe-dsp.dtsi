@@ -6,6 +6,7 @@
 		label = "adsp";
 		memory-region = <&adsp_mem_heap>;
 		qcom,vmids = <22 37>;
+		qcom,dsp-iova-format = <1>;
 
 		compute-cb@1 {
 			compatible = "qcom,fastrpc-compute-cb";

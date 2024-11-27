@@ -25,7 +25,6 @@
 			iommus = <&apps_smmu 0x1004 0x0080>,
 				 <&apps_smmu 0x1044 0x0020>;
 			qcom,iommu-faults = "stall-disable", "HUPCF";
-			qcom,nsessions = <8>;
 			dma-coherent;
 			qcom,iova-best-fit;
 			pd-type = <2>;	/* AUDIO_STATICPD */
@@ -37,6 +36,7 @@
 			iommus = <&apps_smmu 0x1005 0x0080>,
 				 <&apps_smmu 0x1045 0x0020>;
 			qcom,iommu-faults = "stall-disable", "HUPCF";
+			qcom,nsessions = <8>;
 			dma-coherent;
 			qcom,iova-best-fit;
 			pd-type = <3>;	/* SENSORS_STATICPD */

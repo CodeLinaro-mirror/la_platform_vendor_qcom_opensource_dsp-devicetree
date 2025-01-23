@@ -3,10 +3,12 @@
 		compatible = "qcom,fastrpc";
 		qcom,glink-channels = "fastrpcglink-apps-dsp";
 		qcom,intents = <0x181 64>;
-		label = "adsp";
+		label = "lpass";
 		memory-region = <&adsp_mem_heap>;
 		qcom,vmids = <22 37>;
 		qcom,dsp-iova-format = <1>;
+		instance-id = <0>;
+		dsp-type = <2>;
 
 		compute-cb@1 {
 			compatible = "qcom,fastrpc-compute-cb";
@@ -85,11 +87,13 @@
 		compatible = "qcom,fastrpc";
 		qcom,glink-channels = "fastrpcglink-apps-dsp";
 		qcom,intents = <0x3fa 64>;
-		label = "cdsp";
+		label = "nsp";
 		qcom,fastrpc-gids = <2908>;
 		qcom,rpc-latency-us = <235>;
 		qcom,single-core-latency-vote;
 		qcom,dsp-iova-format = <1>;
+		instance-id = <0>;
+		dsp-type = <1>;
 
 		compute-cb@1 {
 			compatible = "qcom,fastrpc-compute-cb";

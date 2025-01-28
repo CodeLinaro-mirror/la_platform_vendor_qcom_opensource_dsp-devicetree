@@ -19,8 +19,9 @@
 		qrtr-gen-pool = <&fastrpc_compute_cb1>;
 		frpc-gen-addr-pool = <0x8000 0x9000>;
 		pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
-		alloc-size-range = <0x11000 0xFFFFFFFF>;
+		alloc-size-range = /bits/ 64 <0x4000000 0x3FFFFFFFF>;
 		qcom,dsp-iova-format = <1>;
+		ubs = <34>;
 	};
 
 	fastrpc_compute_cb2: compute-cb@13 {
@@ -32,8 +33,9 @@
 		qcom,iova-best-fit;
 		qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
 		pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
-		alloc-size-range = <0x0 0xFFFFFFFF>;
+		alloc-size-range = /bits/ 64 <0x0 0x3FFFFFFFF>;
 		qcom,dsp-iova-format = <1>;
+		ubs = <34>;
 	};
 
 	qrtr-genpool {

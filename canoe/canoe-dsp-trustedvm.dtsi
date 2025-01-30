@@ -1,4 +1,5 @@
 #include <dt-bindings/soc/qcom,ipcc.h>
+#include <dt-bindings/mailbox/qcom-ipcc-canoe.h>
 #include <dt-bindings/interrupt-controller/arm-gic.h>
 
 &soc {
@@ -8,7 +9,7 @@
 
 	fastrpc_compute_cb1: compute-cb@12 {
 		compatible = "qcom,fastrpc-compute-cb";
-		reg = <14>;
+		reg = <11>;
 		iommus = <&apps_smmu 0xC0B 0x0>;
 		memory-region = <&fastrpc_gen_pool_region>;
 		qcom,iommu-faults = "stall-disable", "HUPCF";
@@ -24,7 +25,7 @@
 
 	fastrpc_compute_cb2: compute-cb@13 {
 		compatible = "qcom,fastrpc-compute-cb";
-		reg = <11>;
+		reg = <14>;
 		iommus = <&apps_smmu 0xC0E 0x0>;
 		qcom,iommu-faults = "stall-disable", "HUPCF";
 		dma-coherent;
@@ -39,9 +40,9 @@
 		compatible = "qcom,qrtr-genpool";
 		gen-pool = <&fastrpc_compute_cb1>;
 		interrupt-parent = <&ipcc_mproc_ns1>;
-		interrupts = <IPCC_CLIENT_CDSP 0 IRQ_TYPE_EDGE_RISING>,
-				<IPCC_CLIENT_CDSP 1 IRQ_TYPE_EDGE_RISING>;
-		mboxes = <&ipcc_mproc_ns1 IPCC_CLIENT_CDSP 0>,
-				<&ipcc_mproc_ns1 IPCC_CLIENT_CDSP 1>;
+		interrupts = <IPCC_MPROC_CDSP 0 IRQ_TYPE_EDGE_RISING>,
+				<IPCC_MPROC_CDSP 1 IRQ_TYPE_EDGE_RISING>;
+		mboxes = <&ipcc_mproc_ns1 IPCC_MPROC_CDSP 0>,
+				<&ipcc_mproc_ns1 IPCC_MPROC_CDSP 1>;
 	};
 };

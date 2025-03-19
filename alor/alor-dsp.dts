@@ -1,0 +1,11 @@
+/dts-v1/;
+/plugin/;
+
+#include "alor-dsp.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. alor v1 SoC";
+	compatible = "qcom,alor";
+	qcom,msm-id = <0x685 0x10000>, <0x685 0x20000>;
+	qcom,board-id = <0 0>;
+};

@@ -2,11 +2,13 @@
 	qcom,fastrpc {
 		compatible = "qcom,fastrpc";
 		qcom,glink-channels = "fastrpcglink-apps-dsp";
-		qcom,intents = <0x64 64>;
-		label = "adsp";
+		qcom,intents = <0x181 64>;
+		label = "lpass";
 		memory-region = <&adsp_mem_heap>;
 		qcom,vmids = <22 37>;
 		qcom,dsp-iova-format = <1>;
+		instance-id = <0>;
+		dsp-type = <2>;
 
 		compute-cb@1 {
 			compatible = "qcom,fastrpc-compute-cb";
@@ -84,12 +86,14 @@
 	qcom,fastrpc {
 		compatible = "qcom,fastrpc";
 		qcom,glink-channels = "fastrpcglink-apps-dsp";
-		qcom,intents = <0x64 64>;
-		label = "cdsp";
+		qcom,intents = <0x3fa 64>;
+		label = "nsp";
 		qcom,fastrpc-gids = <2908>;
 		qcom,rpc-latency-us = <235>;
 		qcom,single-core-latency-vote;
 		qcom,dsp-iova-format = <1>;
+		instance-id = <0>;
+		dsp-type = <1>;
 
 		compute-cb@1 {
 			compatible = "qcom,fastrpc-compute-cb";
@@ -102,6 +106,7 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			pd-type = <1>;	/* ROOT_PD */
+			ubs = <34>;
 		};
 
 		compute-cb@2 {
@@ -116,6 +121,7 @@
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
 			pd-type = <7>;	/* USERPD */
+			ubs = <34>;
 		};
 
 		compute-cb@3 {
@@ -130,6 +136,7 @@
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
 			pd-type = <7>;	/* USERPD */
+			ubs = <34>;
 		};
 
 		compute-cb@4 {
@@ -144,6 +151,7 @@
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
 			pd-type = <7>;	/* USERPD */
+			ubs = <34>;
 		};
 
 		compute-cb@5 {
@@ -158,6 +166,7 @@
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
 			pd-type = <7>;	/* USERPD */
+			ubs = <34>;
 		};
 
 		compute-cb@6 {
@@ -172,7 +181,8 @@
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
 			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
-			alloc-size-range = <0x4000000 0xFFFFFFFF>;
+			alloc-size-range = /bits/ 64 <0x4000000 0x3FFFFFFFF>;
+			ubs = <34>;
 		};
 
 		compute-cb@7 {
@@ -187,7 +197,8 @@
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
 			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
-			alloc-size-range = <0x1000000 0xFFFFFFFF>;
+			alloc-size-range = /bits/ 64 <0x1000000 0x3FFFFFFFF>;
+			ubs = <34>;
 		};
 
 		compute-cb@8 {
@@ -202,7 +213,8 @@
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
 			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
-			alloc-size-range = <0x0 0xFFFFFFFF>;
+			alloc-size-range = /bits/ 64 <0x0 0x3FFFFFFFF>;
+			ubs = <34>;
 		};
 
 		compute-cb@9 {
@@ -219,6 +231,7 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			pd-type = <6>;	/* CPZ_USERPD */
+			ubs = <34>;
 		};
 
 		compute-cb@10 {
@@ -233,7 +246,8 @@
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
 			pd-type = <10>;	/* EXT_MAP_PD_TYPE */
-			alloc-size-range = <0x0 0xFFFFFFFF>;
+			alloc-size-range = /bits/ 64 <0x0 0x3FFFFFFFF>;
+			ubs = <34>;
 		};
 
 		compute-cb@11 {
@@ -249,7 +263,8 @@
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
 			pd-type = <10>;	/* EXT_MAP_PD_TYPE */
-			alloc-size-range = <0x0 0xFFFFFFFF>;
+			alloc-size-range = /bits/ 64 <0x0 0x3FFFFFFFF>;
+			ubs = <34>;
 		};
 	};
 };

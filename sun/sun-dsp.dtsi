@@ -2,10 +2,12 @@
 	qcom,fastrpc {
 		compatible = "qcom,fastrpc";
 		qcom,glink-channels = "fastrpcglink-apps-dsp";
-		qcom,intents = <0x64 64>;
-		label = "adsp";
+		qcom,intents = <0x181 64>;
+		label = "lpass";
 		memory-region = <&adsp_mem_heap>;
 		qcom,vmids = <22 37>;
+		instance-id = <0>;
+		dsp-type = <2>;
 
 		compute-cb@1 {
 			compatible = "qcom,fastrpc-compute-cb";
@@ -83,11 +85,13 @@
 	qcom,fastrpc {
 		compatible = "qcom,fastrpc";
 		qcom,glink-channels = "fastrpcglink-apps-dsp";
-		qcom,intents = <0x64 64>;
-		label = "cdsp";
+		qcom,intents = <0x3fA 64>;
+		label = "nsp";
 		qcom,fastrpc-gids = <2908>;
 		qcom,rpc-latency-us = <235>;
 		qcom,single-core-latency-vote;
+		instance-id = <0>;
+		dsp-type = <1>;
 
 		compute-cb@1 {
 			compatible = "qcom,fastrpc-compute-cb";

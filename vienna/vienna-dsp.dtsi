@@ -216,8 +216,7 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <10>;	/* EXT_MAP_PD_TYPE */
-			alloc-size-range = <0x0 0xFFFFFFFF>;
+			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
 		};
 
 		compute-cb@11 {
@@ -228,8 +227,7 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <10>;	/* EXT_MAP_PD_TYPE */
-			alloc-size-range = <0x0 0xFFFFFFFF>;
+			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
 		};
 
 		compute-cb@12 {
@@ -240,8 +238,7 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <10>;	/* EXT_MAP_PD_TYPE */
-			alloc-size-range = <0x0 0xFFFFFFFF>;
+			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
 		};
 	};
 };

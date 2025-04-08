@@ -38,6 +38,10 @@ endif
 #endif
 #endif
 
+ifeq ($(CONFIG_ARCH_VIENNA), y)
+dtbo-y += vienna/vienna-dsp.dtbo
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo

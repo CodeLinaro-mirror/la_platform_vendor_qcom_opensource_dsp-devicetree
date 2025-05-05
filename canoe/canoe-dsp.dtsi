@@ -4,6 +4,7 @@
 		qcom,glink-channels = "fastrpcglink-apps-dsp";
 		qcom,intents = <0x181 64>;
 		qcom,ch-sched-rt;
+		qcom,cb-irq;
 		label = "lpass";
 		memory-region = <&adsp_mem_heap>;
 		qcom,vmids = <22 37>;
@@ -89,6 +90,7 @@
 		qcom,glink-channels = "fastrpcglink-apps-dsp";
 		qcom,intents = <0x3fa 64>;
 		qcom,ch-sched-rt;
+		qcom,cb-irq;
 		label = "nsp";
 		qcom,fastrpc-gids = <2908>;
 		qcom,rpc-latency-us = <235>;

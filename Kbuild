@@ -37,9 +37,15 @@ endif
 ifeq ($(CONFIG_ARCH_RAVELIN), y)
 dtbo-y += ravelin/ravelin-dsp.dtbo
 endif
+
 ifeq ($(CONFIG_ARCH_YUPIK), y)
 dtbo-y += yupik/yupik-dsp.dtbo
 endif
+
+ifeq ($(CONFIG_ARCH_SM6150), y)
+dtbo-y += qcs610-odk-64/qcs610-dsp.dtbo
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo

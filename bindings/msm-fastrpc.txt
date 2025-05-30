@@ -19,6 +19,8 @@ Optional properties:
 - qcom,fastrpc-adsp-sensors-pdr		:	Flag to enable Sensors PDR
 - qcom,single-core-latency-vote		:	Limit FastRPC PM QoS to only vote for 1
 						lowest capacity core
+- qcom,rootheap-buffer-size			:	Root heap buffer size
+- qcom,rootheap-buffer-count		:	Root heap buffer count
 
 Optional subnodes:
 - qcom,msm_fastrpc_compute_cb	:	Child nodes representing the compute context banks

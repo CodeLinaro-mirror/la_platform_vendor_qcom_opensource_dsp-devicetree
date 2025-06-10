@@ -1,0 +1,146 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+ */
+
+&remoteproc_adsp_glink {
+	qcom,fastrpc {
+		compatible = "qcom,fastrpc";
+		qcom,glink-channels = "fastrpcglink-apps-dsp";
+		qcom,intents = <0x64 64>;
+		label = "adsp";
+		memory-region = <&adsp_mem>;
+		qcom,vmids = <22 37>;
+
+		compute-cb@1 {
+			compatible = "qcom,fastrpc-compute-cb";
+			reg = <3>;
+                        iommus = <&apps_smmu 0x1723 0x0>;
+			qcom,iommu-faults = "stall-disable", "HUPCF";
+			dma-coherent;
+			qcom,iova-best-fit;
+			pd-type = <1>;	/* ROOT_PD */
+		};
+
+		compute-cb@2 {
+			compatible = "qcom,fastrpc-compute-cb";
+			reg = <4>;
+                        iommus = <&apps_smmu 0x1724 0x0>;
+			qcom,iommu-faults = "stall-disable", "HUPCF";
+			qcom,nsessions = <8>;
+			dma-coherent;
+			qcom,iova-best-fit;
+			pd-type = <3>;	/* SENSORS_STATICPD */
+		};
+
+		compute-cb@3 {
+			compatible = "qcom,fastrpc-compute-cb";
+			reg = <5>;
+                        iommus = <&apps_smmu 0x1725 0x0>;
+			qcom,iommu-faults = "stall-disable", "HUPCF";
+			dma-coherent;
+			qcom,iova-best-fit;
+			pd-type = <2>;	/* AUDIO_STATICPD */
+		};
+
+		compute-cb@4 {
+			compatible = "qcom,fastrpc-compute-cb";
+			reg = <6>;
+                        iommus = <&apps_smmu 0x1726 0x0>;
+			qcom,iommu-faults = "stall-disable", "HUPCF";
+			dma-coherent;
+			qcom,iova-best-fit;
+			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
+			pd-type = <7>;	/* USERPD */
+		};
+	};
+};
+
+&remoteproc_cdsp_glink {
+	qcom,fastrpc {
+		compatible = "qcom,fastrpc";
+		qcom,glink-channels = "fastrpcglink-apps-dsp";
+		qcom,intents = <0x64 64>;
+		label = "cdsp";
+		qcom,rpc-latency-us = <611>;
+
+		compute-cb@1 {
+                        compatible = "qcom,fastrpc-compute-cb";
+			reg = <1>;
+                        iommus = <&apps_smmu 0x1081 0x0>;
+			qcom,iommu-faults = "stall-disable", "HUPCF";
+			dma-coherent;
+			qcom,iova-best-fit;
+			pd-type = <1>;  /* ROOT_PD */
+                };
+
+		compute-cb@2 {
+                        compatible = "qcom,fastrpc-compute-cb";
+			reg = <2>;
+                        iommus = <&apps_smmu 0x1082 0x0>;
+			qcom,iommu-faults = "stall-disable", "HUPCF";
+			dma-coherent;
+			qcom,iova-best-fit;
+			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
+			pd-type = <7>;  /* USERPD */
+                };
+
+		compute-cb@3 {
+                        compatible = "qcom,fastrpc-compute-cb";
+			reg = <3>;
+                        iommus = <&apps_smmu 0x1083 0x0>;
+			qcom,iommu-faults = "stall-disable", "HUPCF";
+			dma-coherent;
+			qcom,iova-best-fit;
+			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
+			pd-type = <7>;  /* USERPD */
+                };
+
+		compute-cb@4 {
+                        compatible = "qcom,fastrpc-compute-cb";
+			reg = <4>;
+                        iommus = <&apps_smmu 0x1084 0x0>;
+			qcom,iommu-faults = "stall-disable", "HUPCF";
+			dma-coherent;
+			qcom,iova-best-fit;
+			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
+			pd-type = <7>;  /* USERPD */
+                };
+
+		compute-cb@5 {
+                        compatible = "qcom,fastrpc-compute-cb";
+			reg = <5>;
+                        iommus = <&apps_smmu 0x1085 0x0>;
+			qcom,iommu-faults = "stall-disable", "HUPCF";
+			dma-coherent;
+			qcom,iova-best-fit;
+			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
+			pd-type = <9>; /* USER_UNSIGNEDPD_POOL */
+			alloc-size-range = <0x0 0xFFFFFFFF>;
+                };
+
+		compute-cb@6 {
+                        compatible = "qcom,fastrpc-compute-cb";
+			reg = <6>;
+                        iommus = <&apps_smmu 0x1086 0x0>;
+			qcom,iommu-faults = "stall-disable", "HUPCF";
+			dma-coherent;
+			qcom,iova-best-fit;
+			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
+			pd-type = <9>; /* USER_UNSIGNEDPD_POOL */
+			alloc-size-range = <0x0 0xFFFFFFFF>;
+                };
+
+		compute-cb@9 {
+                        compatible = "qcom,fastrpc-compute-cb";
+			reg = <9>;
+			qcom,secure-context-bank;
+                        iommus = <&apps_smmu 0x1089 0x0>;
+			qcom,iommu-faults = "stall-disable", "HUPCF";
+			qcom,iommu-vmid = <0xA>;	/* VMID_CP_PIXEL */
+			dma-coherent;
+			qcom,iova-best-fit;
+			pd-type = <6>; /* CPZ_USERPD */
+                };
+	};
+};

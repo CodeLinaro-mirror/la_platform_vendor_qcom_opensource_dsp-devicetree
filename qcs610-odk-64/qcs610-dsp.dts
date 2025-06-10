@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "qcs610-dsp.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. QCS610 v1 SOC";
+	compatible = "qcom,sm6150";
+	qcom,msm-id = <355 0x0>, <401 0x0>;
+	qcom,board-id = <0 0>;
+};

@@ -35,7 +35,6 @@ ifeq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-y += canoe/canoe-dsp-trustedvm.dtbo
 else
 dtbo-y += canoe/canoe-dsp.dtbo
-dtbo-y += canoe/canoe-dsp_v2.dtbo
 endif
 endif
 

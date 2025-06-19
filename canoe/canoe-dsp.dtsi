@@ -8,9 +8,12 @@
 		label = "lpass";
 		memory-region = <&adsp_mem_heap>;
 		qcom,vmids = <22 37>;
+		qcom,rpc-latency-us = <235>;
 		qcom,dsp-iova-format = <1>;
 		instance-id = <0>;
 		dsp-type = <2>;
+		qcom,rootheap-buffer-size = <0x140000>;
+		qcom,rootheap-buffer-count = <3>;
 
 		compute-cb@1 {
 			compatible = "qcom,fastrpc-compute-cb";
@@ -98,6 +101,8 @@
 		qcom,dsp-iova-format = <1>;
 		instance-id = <0>;
 		dsp-type = <1>;
+		qcom,rootheap-buffer-size = <0x140000>;
+		qcom,rootheap-buffer-count = <3>;
 
 		compute-cb@1 {
 			compatible = "qcom,fastrpc-compute-cb";

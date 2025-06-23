@@ -43,6 +43,10 @@ ifeq ($(CONFIG_ARCH_ALOR), y)
 dtbo-y += alor/alor-dsp.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_X1P42100), y)
+dtbo-y += x1p42100/x1p42100-dsp.dtbo
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo

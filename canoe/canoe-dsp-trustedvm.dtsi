@@ -38,7 +38,7 @@
 		ubs = <34>;
 	};
 
-	qrtr_genpool: qrtr-genpool {
+	qrtr-genpool {
 		compatible = "qcom,qrtr-genpool";
 		gen-pool = <&fastrpc_compute_cb1>;
 		interrupt-parent = <&ipcc_mproc_ns1>;
@@ -47,8 +47,4 @@
 		mboxes = <&ipcc_mproc_ns1 IPCC_MPROC_CDSP 0>,
 				<&ipcc_mproc_ns1 IPCC_MPROC_CDSP 1>;
 	};
-};
-
-&non_devices_common {
-	required-subnodes-dsp = <&qrtr_genpool &fastrpc_compute_cb2>;
 };

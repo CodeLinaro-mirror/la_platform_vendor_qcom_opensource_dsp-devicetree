@@ -275,6 +275,7 @@
 				 <&apps_smmu 0x0C0D 0x0040>,
 				 <&apps_smmu 0x19CD 0x0000>;
 			memory-region = <&fastrpc_far_region>;
+			qcom,nsessions = <32>;
 			qcom,iommu-faults = "stall-disable", "HUPCF";
 			dma-coherent;
 			qcom,iova-best-fit;

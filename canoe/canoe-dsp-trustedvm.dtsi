@@ -4,7 +4,7 @@
 
 &soc {
 	fastrpc_gen_pool_region: fastrpc_gen_pool_region {
-		iommu-addresses = <&fastrpc_compute_cb1 0x8000 0x10FFF>;
+		iommu-addresses = <&fastrpc_compute_cb1 0x0 0x8000 0x0 0x10FFF>;
 	};
 
 	fastrpc_compute_cb1: compute-cb@12 {
@@ -38,7 +38,7 @@
 		ubs = <34>;
 	};
 
-	qrtr-genpool {
+	qrtr_genpool: qrtr-genpool {
 		compatible = "qcom,qrtr-genpool";
 		gen-pool = <&fastrpc_compute_cb1>;
 		interrupt-parent = <&ipcc_mproc_ns1>;
@@ -47,4 +47,8 @@
 		mboxes = <&ipcc_mproc_ns1 IPCC_MPROC_CDSP 0>,
 				<&ipcc_mproc_ns1 IPCC_MPROC_CDSP 1>;
 	};
+};
+
+&non_devices_common {
+	required-subnodes-dsp = <&qrtr_genpool &fastrpc_compute_cb2>;
 };

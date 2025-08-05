@@ -6,6 +6,10 @@
 	fastrpc_gen_pool_region: fastrpc_gen_pool_region {
 		iommu-addresses = <&fastrpc_compute_cb1 0x0 0x8000 0x0 0x10FFF>;
 	};
+	
+	/* IOMMU Config */
+	#address-cells = <2>;
+	#size-cells = <2>;
 
 	fastrpc_compute_cb1: compute-cb@12 {
 		compatible = "qcom,fastrpc-compute-cb";

@@ -220,7 +220,7 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <10>;	/* EXT_MAP_PD_TYPE */
+			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
 			alloc-size-range = /bits/ 64 <0x0 0x3FFFFFFFF>;
 		};
 
@@ -232,7 +232,7 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <10>;	/* EXT_MAP_PD_TYPE */
+			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
 			alloc-size-range = /bits/ 64 <0x0 0x3FFFFFFFF>;
 		};
 	};

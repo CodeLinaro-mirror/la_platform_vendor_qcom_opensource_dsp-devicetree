@@ -6,11 +6,11 @@
 /dts-v1/;
 /plugin/;
 
-#include "x1p42100-dsp.dtsi"
+#include "x1e80100-dsp.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. x1p42100 SoC";
-	compatible = "qcom,x1p42100";
-	qcom,msm-id = <0x635 0x10000>;
+	model = "Qualcomm Technologies, Inc. x1e80100 SoC";
+	compatible = "qcom,x1e80100";
+	qcom,msm-id = <555 0x10000>;
 	qcom,board-id = <0 0>;
 };

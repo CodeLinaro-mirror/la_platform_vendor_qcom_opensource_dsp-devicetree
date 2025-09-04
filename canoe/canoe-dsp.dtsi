@@ -15,6 +15,10 @@
 		qcom,rootheap-buffer-size = <0x140000>;
 		qcom,rootheap-buffer-count = <3>;
 
+		/* IOMMU Config */
+		#address-cells = <2>;
+		#size-cells = <2>;
+
 		compute-cb@1 {
 			compatible = "qcom,fastrpc-compute-cb";
 			reg = <3>;
@@ -103,6 +107,10 @@
 		dsp-type = <1>;
 		qcom,rootheap-buffer-size = <0x140000>;
 		qcom,rootheap-buffer-count = <3>;
+		
+		/* IOMMU Config */
+		#address-cells = <2>;
+		#size-cells = <2>;
 
 		compute-cb@1 {
 			compatible = "qcom,fastrpc-compute-cb";

@@ -56,7 +56,8 @@
 			qcom,iommu-faults = "stall-disable", "HUPCF";
 			dma-coherent;
 			qcom,iova-best-fit;
-			pd-type = <5>;	/* OIS_STATICPD */
+			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
+			pd-type = <7>;	/* USERPD */
 		};
 
 		compute-cb@5 {

@@ -11,7 +11,7 @@
 / {
 	model = "Qualcomm Technologies, Inc. chora v1 SoC";
 	compatible = "qcom,chora";
-	qcom,msm-id = <724 0x10000>,
-			<0x10002D4 0x10000>;
+	qcom,msm-id = <724 0x10000>, <744 0x10000>,
+			<0x10002D4 0x10000>, <0x10002E8 0x10000>;
 	qcom,board-id = <0 0>;
 };

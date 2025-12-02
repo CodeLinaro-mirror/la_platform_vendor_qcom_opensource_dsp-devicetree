@@ -19,7 +19,7 @@
 			iommus = <&apps_smmu 0x1803 0x0>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
+			dma-coherent;
 			pd-type = <1>;
 		};
 
@@ -30,7 +30,7 @@
 			iommus = <&apps_smmu 0x1804 0x0>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
+			dma-coherent;
                         pd-type = <2>;
 		};
 		compute-cb@3 {
@@ -40,7 +40,7 @@
 			iommus = <&apps_smmu 0x1805 0x0>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
+			dma-coherent;
 			shared-cb = <5>;
             qcom,nsessions = <5>;
 			pd-type = <3>;
@@ -52,7 +52,6 @@
 &remoteproc_cdsp_glink {
 	qcom,fastrpc {
 		compatible = "qcom,fastrpc";
-		//qcom,glink-channels = "cdsprmglink-apps-dsp";
 		qcom,glink-channels = "fastrpcglink-apps-dsp";
 		qcom,intents = <0x20 12>;
 		label = "cdsp";
@@ -68,7 +67,7 @@
 					<&apps_smmu 0x1181 0x0420>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
+			dma-coherent;
 			pd-type = <1>;
 		};
 
@@ -80,8 +79,7 @@
 					<&apps_smmu 0x1182 0x0420>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
-			#qcom,iova-max-align-shift = <9>;
+			dma-coherent;
 			pd-type = <7>;
 		};
 
@@ -93,9 +91,7 @@
 					<&apps_smmu 0x1183 0x0420>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
-
-			#qcom,iova-max-align-shift = <9>;
+			dma-coherent;
 			pd-type = <7>;
 		};
 
@@ -107,9 +103,7 @@
 					<&apps_smmu 0x1184 0x0420>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
-
-			#qcom,iova-max-align-shift = <9>;
+			dma-coherent;
 			pd-type = <7>;
 		};
 
@@ -121,9 +115,7 @@
 					<&apps_smmu 0x1185 0x0420>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
-
-			#qcom,iova-max-align-shift = <9>;
+			dma-coherent;
 			pd-type = <7>;
 		};
 
@@ -135,9 +127,7 @@
 					<&apps_smmu 0x1186 0x0420>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
-
-			#qcom,iova-max-align-shift = <9>;
+			dma-coherent;
 			pd-type = <7>;
 		};
 
@@ -149,9 +139,7 @@
 					<&apps_smmu 0x1187 0x0420>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
-
-			#qcom,iova-max-align-shift = <9>;
+			dma-coherent;
 			pd-type = <7>;
 		};
 
@@ -163,9 +151,7 @@
 					<&apps_smmu 0x1188 0x0420>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
-
-			#qcom,iova-max-align-shift = <9>;
+			dma-coherent;
 			pd-type = <7>;
 		};
 
@@ -179,7 +165,7 @@
 			qcom,iommu-dma-addr-pool = <0x60000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			qcom,iommu-vmid = <0xA>;
-			dma-coherent-hint-cached;
+			dma-coherent;
 			pd-type = <6>;
 		};
 
@@ -191,11 +177,9 @@
 					<&apps_smmu 0x118B 0x0420>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
+			dma-coherent;
          		qcom,iova-best-fit;
-			#qcom,iova-max-align-shift = <9>;
 			pd-type = <7>;
-			#alloc-size-range = <0x0 0xFFFFFFFF>;
 		};
 
 		compute-cb@11 {
@@ -206,11 +190,8 @@
 					<&apps_smmu 0x118C 0x0420>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
-
-			#qcom,iova-max-align-shift = <9>;
+			dma-coherent;
 			pd-type = <9>;
-			#alloc-size-range = <0x0 0xFFFFFFFF>;
 		};
 
 		compute-cb@12 {
@@ -221,11 +202,8 @@
 					<&apps_smmu 0x118D 0x0420>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
-
-			#qcom,iova-max-align-shift = <9>;
+			dma-coherent;
 			pd-type = <9>;
-			#alloc-size-range = <0x0 0xFFFFFFFF>;
 		};
 
 		compute-cb@13 {
@@ -236,11 +214,8 @@
 					<&apps_smmu 0x118E 0x0420>;
 			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
-			dma-coherent-hint-cached;
-
-			#qcom,iova-max-align-shift = <9>;
+			dma-coherent;
 			pd-type = <9>;
-			#alloc-size-range = <0x0 0xFFFFFFFF>;
 		};
 	};
 };

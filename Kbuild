@@ -47,7 +47,7 @@ dtbo-y += khaje/khaje-dsp.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SM6150), y)
-dtbo-y += qcs610-odk-64/qcs610-dsp.dtbo
+dtbo-y += sdmsteppe/qcs610-dsp.dtbo
 endif
 
 always-y	:= $(dtb-y) $(dtbo-y)

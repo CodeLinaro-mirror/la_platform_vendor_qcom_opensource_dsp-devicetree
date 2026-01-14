@@ -51,6 +51,10 @@ ifeq ($(CONFIG_ARCH_X1E80100), y)
 dtbo-y += x1e80100/x1e80100-dsp.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_MALABAR), y)
+dtbo-y += malabar/malabar-dsp.dtbo
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo

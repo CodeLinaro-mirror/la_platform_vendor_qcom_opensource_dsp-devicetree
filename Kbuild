@@ -43,8 +43,16 @@ ifeq ($(CONFIG_ARCH_ALOR), y)
 dtbo-y += alor/alor-dsp.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_CHORA), y)
+dtbo-y += chora/chora-dsp.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_X1E80100), y)
 dtbo-y += x1e80100/x1e80100-dsp.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_MALABAR), y)
+dtbo-y += malabar/malabar-dsp.dtbo
 endif
 
 always-y	:= $(dtb-y) $(dtbo-y)

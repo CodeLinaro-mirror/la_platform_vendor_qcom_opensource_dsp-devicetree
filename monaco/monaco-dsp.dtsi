@@ -15,7 +15,6 @@
 			compatible = "qcom,fastrpc-compute-cb";
 			reg = <3>;
 			iommus = <&apps_smmu 0x01C3 0x0>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable";
 			pd-type = <1>;	/* ROOT_PD */
 		};
@@ -24,7 +23,6 @@
 			compatible = "qcom,fastrpc-compute-cb";
 			reg = <4>;
 			iommus = <&apps_smmu 0x01C4 0x0>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable";
 			qcom,nsessions = <5>;
 			pd-type = <3>;	/* SENSORS_STATICPD */
@@ -34,7 +32,6 @@
 			compatible = "qcom,fastrpc-compute-cb";
 			reg = <5>;
 			iommus = <&apps_smmu 0x01C5 0x0>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable";
 			pd-type = <2>;	/* AUDIO_STATICPD */
 		};
@@ -43,7 +40,6 @@
 			compatible = "qcom,fastrpc-compute-cb";
 			reg = <6>;
 			iommus = <&apps_smmu 0x01C6 0x0>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable";
 			pd-type = <7>;	/* USERPD */
 		};
@@ -52,7 +48,6 @@
 			compatible = "qcom,fastrpc-compute-cb";
 			reg = <7>;
 			iommus = <&apps_smmu 0x01C7 0x0>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable";
 			pd-type = <7>;	/* USERPD */
 		};

@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+/dts-v1/;
+/plugin/;
+
+#include "lahaina-dsp.dtsi"
+
+/ {
+        model = "Qualcomm Technologies, Inc. Lahaina";
+//        compatible = "qcom,lahaina";
+compatible = "qcom,lahaina-mtp", "qcom,lahaina", "qcom,mtp";
+//        qcom,msm-id = <415 0x10000>, <456 0x10000>, <501 0x10000>;
+	qcom,msm-id = <415 0x10000>, <456 0x10000>, <501 0x10000>, 
+			<415 0x20000>, <456 0x20000>, <501 0x20000>,
+			<415 0x20001>, <456 0x20001>, <501 0x20001>;
+	qcom,board-id = <0 0>;
+};

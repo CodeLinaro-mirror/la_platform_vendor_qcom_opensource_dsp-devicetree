@@ -50,6 +50,9 @@ ifeq ($(CONFIG_ARCH_BENGAL), y)
 dtbo-y += bengal/bengal-dsp.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_LAHAINA), y)
+dtbo-y += lahaina/lahaina-dsp.dtbo
+endif
 ifeq ($(CONFIG_ARCH_SM6150), y)
 dtbo-y += sdmsteppe/qcs610-dsp.dtbo
 endif

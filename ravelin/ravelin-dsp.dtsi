@@ -7,8 +7,10 @@
 		compatible = "qcom,fastrpc";
 		qcom,glink-channels = "fastrpcglink-apps-dsp";
 		qcom,intents = <0x64 64>;
-		label = "adsp";
+		label = "lpass";
 		memory-region = <&adsp_mem_heap>;
+		instance-id = <0>;
+		dsp-type = <2>;
 		qcom,vmids = <22 37>;
 
 		compute-cb@1 {

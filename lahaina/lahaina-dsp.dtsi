@@ -75,7 +75,6 @@
                         qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
                         qcom,iommu-faults = "stall-disable", "HUPCF";
                         dma-coherent-hint-cached;
-                        shared-cb = <4>;
                         qcom,nsessions = <4>;
                         pd-type = <3>;
                 };
@@ -87,8 +86,6 @@
                         iommus = <&apps_smmu 0x0543 0x0>;
                         qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
                         qcom,iommu-faults = "stall-disable", "HUPCF";
-                        shared-cb = <4>;
-                        qcom,nsessions = <4>;
                         dma-coherent-hint-cached;
                         pd-type = <7>;
                 };

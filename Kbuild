@@ -42,8 +42,12 @@ ifeq ($(CONFIG_ARCH_YUPIK), y)
 dtbo-y += yupik/yupik-dsp.dtbo
 endif
 
-ifeq ($(CONFIG_ARCH_BENGAL), y)
+ifeq ($(CONFIG_ARCH_KHAJE), y)
 dtbo-y += khaje/khaje-dsp.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_BENGAL), y)
+dtbo-y += bengal/bengal-dsp.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SM6150), y)

@@ -70,6 +70,12 @@ dtbo-y += seraph/seraph-dsp-trustedvm.dtbo
 endif
 endif
 
+ifeq ($(CONFIG_ARCH_SHIKRA), y)
+ifeq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-y += shikra/shikra-dsp-trustedvm.dtbo
+endif
+endif
+
 ifeq ($(CONFIG_ARCH_PIKACHU), y)
 ifeq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-y += seraph/pikachu-dsp-trustedvm.dtbo

@@ -1,0 +1,15 @@
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * SPDX-License-Identifier: BSD-3-Clause
+*/
+
+/dts-v1/;
+/plugin/;
+
+#include "shikra-dsp-trustedvm.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Shikra - TrustedVM";
+	compatible = "qcom,shikra";
+	qcom,msm-id = <759 0x10000>, <758 0x20000>, <756 0x10000>;
+};

@@ -1,0 +1,15 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+/dts-v1/;
+/plugin/;
+
+#include "../bengal/bengal-dsp.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. BENGAL";
+	compatible = "qcom,bengal";
+	qcom,msm-id = <523 0x10000>;
+	qcom,board-id = <0x1000B 0x406>;
+};

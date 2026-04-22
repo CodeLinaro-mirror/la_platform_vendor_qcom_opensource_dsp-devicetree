@@ -48,6 +48,7 @@ endif
 
 ifeq ($(CONFIG_ARCH_BENGAL), y)
 dtbo-y += bengal/bengal-dsp.dtbo
+dtbo-y += qrbx210/qrb4210-dsp.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SCUBA), y)

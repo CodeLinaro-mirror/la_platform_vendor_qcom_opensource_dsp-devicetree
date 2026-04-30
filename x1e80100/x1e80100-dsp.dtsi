@@ -177,9 +177,9 @@
 			compatible = "qcom,fastrpc-compute-cb";
 			reg = <9>;
 			qcom,secure-context-bank;
-			iommus = <&apps_smmu 0x0C09 0x0020>;
+			/* Use 0x49 (S1 VMID AC_VM_COMPUTE_CP_PIXE) instead of the SID. */
+			iommus = <&dpd_smmu 0x49>;
 			qcom,iommu-faults = "stall-disable", "HUPCF";
-			qcom,iommu-vmid = <0xA>;	/* VMID_CP_PIXEL */
 			qcom,nsessions = <3>;
 			dma-coherent;
 			qcom,iova-best-fit;

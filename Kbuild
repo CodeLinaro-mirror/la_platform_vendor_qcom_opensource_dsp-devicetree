@@ -55,6 +55,12 @@ ifeq ($(CONFIG_ARCH_MALABAR), y)
 dtbo-y += malabar/malabar-dsp.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_SERAPH), y)
+ifeq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-y += seraph/seraph-dsp-trustedvm.dtbo
+endif
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo

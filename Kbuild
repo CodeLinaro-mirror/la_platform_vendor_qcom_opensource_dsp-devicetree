@@ -53,6 +53,11 @@ endif
 ifeq ($(CONFIG_ARCH_LAHAINA), y)
 dtbo-y += lahaina/lahaina-dsp.dtbo
 endif
+
+ifeq ($(CONFIG_ARCH_SCUBA), y)
+dtbo-y += scuba/scuba-dsp.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_SM6150), y)
 dtbo-y += sdmsteppe/qcs610-dsp.dtbo
 endif

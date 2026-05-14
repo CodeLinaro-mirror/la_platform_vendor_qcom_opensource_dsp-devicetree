@@ -61,6 +61,12 @@ dtbo-y += seraph/seraph-dsp-trustedvm.dtbo
 endif
 endif
 
+ifeq ($(CONFIG_ARCH_PIKACHU), y)
+ifeq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-y += seraph/pikachu-dsp-trustedvm.dtbo
+endif
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo

@@ -1,0 +1,15 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+/dts-v1/;
+/plugin/;
+
+#include "scuba-dsp.dtsi"
+
+/ {
+
+        model = "Qualcomm Technologies, Inc. IOT SCUBA";
+        compatible = "qcom,scuba-iot";
+        qcom,msm-id = <473 0x10000>, <441 0x10000>,<474 0x10000>;
+};

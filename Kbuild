@@ -56,6 +56,10 @@ ifeq ($(CONFIG_ARCH_X1E80100), y)
 dtbo-y += x1e80100/x1e80100-dsp.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_X1P42100), y)
+dtbo-y += x1p42100/x1p42100-dsp.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_MALABAR), y)
 dtbo-y += malabar/malabar-dsp.dtbo
 endif

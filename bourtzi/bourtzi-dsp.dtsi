@@ -43,5 +43,15 @@
 			dma-coherent;
 			pd-type = <2>;	/* AUDIO_STATICPD */
 		};
+
+		compute-cb@4 {
+                        compatible = "qcom,fastrpc-compute-cb";
+                        reg = <6>;
+                        label = "adsprpc-smd";
+                        iommus = <&apps_smmu 0x1006 0x0>;
+                        qcom,iommu-faults = "stall-disable", "HUPCF";
+                        dma-coherent;
+                        pd-type = <7>;  /* ADSP DYNAMICPD */
+                };
 	};
 };

@@ -10,14 +10,11 @@
 		label = "adsp";
 		memory-region = <&adsp_mem>;
 		qcom,vmids  = <22 37>;
-
-
 		compute-cb@1 {
 			compatible = "qcom,fastrpc-compute-cb";
 			reg = <3>;
 			label = "adsprpc-smd";
 			iommus = <&apps_smmu 0x1803 0x0>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
 			pd-type = <1>;
@@ -28,7 +25,6 @@
 			reg = <4>;
 			label = "adsprpc-smd";
 			iommus = <&apps_smmu 0x1804 0x0>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
                         pd-type = <2>;
@@ -38,7 +34,6 @@
 			reg = <5>;
 			label = "adsprpc-smd";
 			iommus = <&apps_smmu 0x1805 0x0>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
 			shared-cb = <5>;
@@ -65,7 +60,6 @@
 			label = "cdsprpc-smd";
 			iommus = <&apps_smmu 0x11A1 0x0420>,
 					<&apps_smmu 0x1181 0x0420>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
 			pd-type = <1>;
@@ -77,7 +71,6 @@
 			label = "cdsprpc-smd";
 			iommus = <&apps_smmu 0x11A2 0x0420>,
 					<&apps_smmu 0x1182 0x0420>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
 			pd-type = <7>;
@@ -89,7 +82,6 @@
 			label = "cdsprpc-smd";
 			iommus = <&apps_smmu 0x11A3 0x0420>,
 					<&apps_smmu 0x1183 0x0420>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
 			pd-type = <7>;
@@ -101,7 +93,6 @@
 			label = "cdsprpc-smd";
 			iommus = <&apps_smmu 0x11A4 0x0420>,
 					<&apps_smmu 0x1184 0x0420>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
 			pd-type = <7>;
@@ -113,7 +104,6 @@
 			label = "cdsprpc-smd";
 			iommus = <&apps_smmu 0x11A5 0x0420>,
 					<&apps_smmu 0x1185 0x0420>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
 			pd-type = <7>;
@@ -125,7 +115,6 @@
 			label = "cdsprpc-smd";
 			iommus = <&apps_smmu 0x11A6 0x0420>,
 					<&apps_smmu 0x1186 0x0420>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
 			pd-type = <7>;
@@ -137,7 +126,6 @@
 			label = "cdsprpc-smd";
 			iommus = <&apps_smmu 0x11A7 0x0420>,
 					<&apps_smmu 0x1187 0x0420>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
 			pd-type = <7>;
@@ -149,7 +137,6 @@
 			label = "cdsprpc-smd";
 			iommus = <&apps_smmu 0x11A8 0x0420>,
 					<&apps_smmu 0x1188 0x0420>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
 			pd-type = <7>;
@@ -162,7 +149,6 @@
 			qcom,secure-context-bank;
 			iommus = <&apps_smmu 0x11A9 0x0420>,
 					<&apps_smmu 0x1189 0x0420>;
-			qcom,iommu-dma-addr-pool = <0x60000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			qcom,iommu-vmid = <0xA>;
 			dma-coherent;
@@ -175,7 +161,6 @@
 			label = "cdsprpc-smd";
 			iommus = <&apps_smmu 0x11AB 0x0420>,
 					<&apps_smmu 0x118B 0x0420>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
          		qcom,iova-best-fit;
@@ -188,7 +173,6 @@
 			label = "cdsprpc-smd";
 			iommus = <&apps_smmu 0x11AC 0x0420>,
 					<&apps_smmu 0x118C 0x0420>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
 			pd-type = <9>;
@@ -200,7 +184,6 @@
 			label = "cdsprpc-smd";
 			iommus = <&apps_smmu 0x11AD 0x0420>,
 					<&apps_smmu 0x118D 0x0420>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
 			pd-type = <9>;
@@ -212,7 +195,6 @@
 			label = "cdsprpc-smd";
 			iommus = <&apps_smmu 0x11AE 0x0420>,
 					<&apps_smmu 0x118E 0x0420>;
-			qcom,iommu-dma-addr-pool = <0x80000000 0x78000000>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
 			pd-type = <9>;

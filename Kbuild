@@ -58,6 +58,10 @@ ifeq ($(CONFIG_ARCH_SM6150), y)
 dtbo-y += sdmsteppe/qcs610-dsp.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_WAIPIO), y)
+dtbo-y += waipio/waipio-dsp.dtbo
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo

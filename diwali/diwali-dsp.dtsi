@@ -38,6 +38,7 @@
 			iommus = <&apps_smmu 0x1805 0x0>;
 			qcom,iommu-faults = "stall-disable" , "HUPCF";
 			dma-coherent;
+			qcom,nsessions = <5>;
 			pd-type = <3>;
 		};
 	};

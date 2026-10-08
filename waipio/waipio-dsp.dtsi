@@ -49,7 +49,6 @@
                 qcom,glink-channels = "fastrpcglink-apps-dsp";
                 qcom,intents = <0x64 64>;
                 label = "sdsp";
-                memory-region = <&sdsp_mem>;
                 qcom,vmids  = <22 37>;
 
                 compute-cb@1 {

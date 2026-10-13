@@ -64,9 +64,19 @@ ifeq ($(CONFIG_ARCH_MALABAR), y)
 dtbo-y += malabar/malabar-dsp.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_MAHUA), y)
+dtbo-y += mahua/mahua-dsp.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_SERAPH), y)
 ifeq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-y += seraph/seraph-dsp-trustedvm.dtbo
+endif
+endif
+
+ifeq ($(CONFIG_ARCH_SHIKRA), y)
+ifeq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-y += shikra/shikra-dsp-trustedvm.dtbo
 endif
 endif
 

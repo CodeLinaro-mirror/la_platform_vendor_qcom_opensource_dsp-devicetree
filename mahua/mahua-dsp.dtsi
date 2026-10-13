@@ -91,6 +91,12 @@
 	};
 };
 
+/* For extended mappings, generate IOVA over 34-bits only */
+&reserved_memory {
+	fastrpc_far_region: fastrpc_far_region {
+		iommu-addresses = <&fastrpc_far_cb 0x0 0x0 0x3 0xFFFFFFFF>;
+	};
+};
 
 &remoteproc_cdsp_glink {
 	qcom,fastrpc {
@@ -271,19 +277,21 @@
 			ubs = <34>;
 		};
 
-		compute-cb@12 {
+		fastrpc_far_cb: compute-cb@12 {
 			compatible = "qcom,fastrpc-compute-cb";
 			reg = <14>;
 			iommus = <&apps_smmu 0x200E 0x0440>,
 				 <&apps_smmu 0x196E 0x0000>,
 				 <&apps_smmu 0x19CE 0x0000>;
+			memory-region = <&fastrpc_far_region>;
+			qcom,nsessions = <32>;
 			qcom,iommu-faults = "stall-disable", "HUPCF";
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
+			pd-type = <10>;	/* EXT_MAP_PD_TYPE */
 			alloc-size-range = /bits/ 64 <0x0 0x3FFFFFFFF>;
-			ubs = <34>;
+			ubs = <40>;
 		};
 	};
 };
